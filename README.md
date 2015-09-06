@@ -2,6 +2,7 @@ mc_mraf Project
 ===============
 
 Developers
+
+- @d3r1ck
 - Ngole Eugene
-- Alangi d3r1ck
 - Gnondia, Gericom
