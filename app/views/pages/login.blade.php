@@ -3,7 +3,11 @@
 @section('content')
 <div class="banner-in">
 		
+<<<<<<< HEAD
 </div>
+=======
+	</div>
+>>>>>>> da31db2b8e1ef851d259a7f796655bc7f8512525
 
 <div class="container">
 			<div class="sign">
@@ -27,6 +31,7 @@
 				
 				<div>
 					<label>Email</label>
+<<<<<<< HEAD
 					<input type="text" name="email" value=" ">
 				</div>
 				<div>
@@ -36,7 +41,20 @@
 				<p><a href="#">Forgot Password ?</a></p>
 					<input type="submit" value="submit">		
 			{{Form::close()}}
+=======
+					<input type="text" value=" " name="">
 				</div>
+				<div>
+					<label>Password</label>
+					<input type="password" value=" " name="">
+				</div>
+				<p><a href="#">Forgot Password ?</a></p>
+					<input type="submit" value="submit">		
+				</form>
+				<p> No Account? <a href="#">Register here...</a></p>
+>>>>>>> da31db2b8e1ef851d259a7f796655bc7f8512525
+				</div>
+
 			</div>
 
 @stop
