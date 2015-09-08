@@ -23,6 +23,9 @@ Route::get('/login', function(){
 });
 
 //route to contact us page
-Route::get('contact', function(){
+Route::get('/contact', function(){
 	return View::make('pages/contactus');
 });
+
+//controller to handle session things; login, logout ...
+Route::post('/register_user', 'SessionController@handleRegister')->before('csrf');
