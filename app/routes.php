@@ -23,6 +23,6 @@ Route::get('/login', function(){
 });
 
 //route to contact us page
-Route::get('contact', function(){
+Route::get('/contact', function(){
 	return View::make('pages/contactus');
 });

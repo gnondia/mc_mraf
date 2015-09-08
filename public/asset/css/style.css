@@ -38,13 +38,13 @@ h1,h2,h3,h4,h5,h6,p{
 }
 .header-grid ul li a {
 	color: #dadada;
-	font-size: 1.3em;
+	font-size: 1em;
 	text-decoration: none;
 	letter-spacing: 2px;
 	font-weight: 500;
 }
 .header-grid ul li a:hover{
-	color:#ff9900;
+	color:#00CC00;
 }
 .header-grid ul li label {
 	color: #dadada;
@@ -193,7 +193,7 @@ h1,h2,h3,h4,h5,h6,p{
 	list-style: none;
 	overflow: hidden;
 	padding:0;
-	background:#ff9900;
+	background:#00CC00;
 }
 .dropdown.scrollable.open ul{
 	overflow-y: auto;
@@ -221,7 +221,7 @@ h1,h2,h3,h4,h5,h6,p{
 }
 /*----*/
 .header-bottom-bottom{
-	border-top:5px solid #ff9900;
+	border-top:5px solid #00CC00;
 }
 .search {
 	margin: 0.8em 0.8em 0 0em;	
@@ -244,7 +244,7 @@ a.cart-in{
 	text-decoration:none;
 }
 .cart span{
-	background:#ff9900;
+	background:#00CC00;
 	border-radius:100px;
 	color:#fff;
 	font-size:1.5em;
@@ -269,7 +269,7 @@ a.cart-in{
 .search input[type="submit"] {	
 	width: 60px;
 	height: 46px;
-	background: #ff9900 url(../images/img-sprite.png) -55px 6px no-repeat;
+	background: #00CC00 url(../images/img-sprite.png) -55px 6px no-repeat;
 	padding: 0px 10px;
 	border: none;
 	cursor: pointer;
@@ -281,6 +281,7 @@ a.cart-in{
 /*----*/
 .top-nav ul li{
 	display:inline-block;
+	background-color: 
 }
 .top-nav ul li a{
 	text-decoration:none;
@@ -292,7 +293,7 @@ a.cart-in{
 	letter-spacing: 2px;
 }
 .top-nav ul li a:hover,.top-nav ul li.active a{
-	color:#ff9900;
+	color:#00CC00;
 }
 /*----*/
 .top-nav span.menu{
@@ -307,7 +308,7 @@ a.cart-in{
 	z-index: 9999;
 	left: 0%;
 	margin: 0em;
-	background:#ff9900;
+	background:#00CC00;
 }
 
 .top-nav span.menu {
@@ -412,7 +413,7 @@ a.morebtn:hover{
 	height: 10px;
 	width: 50px;
 	display: inline-block;
-	background:#ff9900
+	background:#00CC00
 }
 .callbacks_here a:after{
 	background:#FFF;
@@ -430,15 +431,15 @@ ul.callbacks_tabs.callbacks1_tabs {
 	right: 19%;
 }
 .price {
-	background: rgba(255, 153, 0, 0.55);
+	background: rgba(0, 204, 0, 0.45);
 	width: 100%;
 	position: absolute;
 	top: 0;
 }
 .price h2{
-	font-size:2.5em;
+	font-size:2em;
 	color:#fff;	
-	padding: 1.3em 0;
+	padding: 0.4em 0;
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 5px;
@@ -452,8 +453,8 @@ ul.callbacks_tabs.callbacks1_tabs {
 .banner-para p{
 	font-size:1.5em;
 	color:#000;
-	padding: 1em 0;
-	width: 59%;
+	padding: 0.3em 0;
+	width: 79%;
 	margin: 0 auto;
 }
 /*----*/
@@ -467,7 +468,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 	color:#000;
 }
 .look h4 a:hover{
-	color:#ff9900;
+	color:#00CC00;
 }
 .look p{
 	color: #000;
@@ -495,7 +496,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 	text-decoration:none;
 	color:#000;
 	font-size: 1.2em;
-	border: 3px solid #ff9900;
+	border: 3px solid #00CC00;
 	padding: 0.7em;
 	font-weight: 500;
 	text-transform: uppercase;
@@ -515,7 +516,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 	height: 100%;
 	top: 0;
 	left: 0;
-	background: #ff9900;
+	background: #00CC00;
 }
 .btn-1c:hover,
 .btn-1c:active {
@@ -556,13 +557,13 @@ ul.callbacks_tabs.callbacks1_tabs {
 span.corn{
 	width: 75px;
 	height: 75px;
-	background: #ff9900 url(../images/corn.png)no-repeat 2px 2px;
+	background: #00CC00 url(../images/corn.png)no-repeat 2px 2px;
 	display: block;
 	border-radius:100px;
 	margin:0 auto;
 }
 span.corn-in{
-	background: #ff9900 url(../images/co1.png)no-repeat 8px 6px;
+	background: #00CC00 url(../images/co1.png)no-repeat 8px 6px;
 }
 .content-bottom h3{
 	color:#fff;
@@ -595,7 +596,7 @@ span.corn-in{
 	padding:2em 0 0;
 }
 .banner-in h6 span {
-	color: #ff9900;
+	color: #00CC00;
 }
 .top-about h5{
 	font-size:3em;
@@ -612,11 +613,11 @@ span.corn-in{
 .grid-left-top h3,.grid-right-top h3{
 	margin: 0.8em 0;
 	font-size: 2.5em;
-	color: #ff9900;
+	color: #00CC00;
 }
 .grid-left-top h3 a,.grid-right-top h3 a{
 	text-decoration:none;
-	color: #ff9900;
+	color: #00CC00;
 }
 .grid-left-top span,.grid-right-top span{
 	font-size: 1.8em;
@@ -669,10 +670,10 @@ ul#filters {
 	cursor: pointer;
 	font-size: 20px;
 	text-transform: uppercase;
-	border: 1px solid #ff9900;
+	border: 1px solid #00CC00;
 }
 #filters li span:hover,#filters li.active  span{
-	background: #ff9900;
+	background: #00CC00;
 	color:#fff;
 }
 #portfoliolist .portfolio {
@@ -772,7 +773,7 @@ ul.social-ic li.in-search  span{
 	color:#000;
 }
 .grid-service h4 a:hover{
-	color:#ff9900;
+	color:#00CC00;
 }
 .grid-service p{
 	margin: 0.5em 0 1em;
@@ -794,7 +795,7 @@ ul.social-ic li.in-search  span{
 }
 i.social{
 	float:left;
-	background: #ff9900 url(../images/img-sprite.png)no-repeat -218px 5px;
+	background: #00CC00 url(../images/img-sprite.png)no-repeat -218px 5px;
 	width: 60px;
 	height: 60px;
 	display: block;
@@ -823,7 +824,7 @@ i.social-at{
 	text-decoration:none;
 }
 .service-on h4 a:hover{
-	color:#ff9900;
+	color:#00CC00;
 }
 .service-on p{
 	margin: 0.5em 0 1em;
@@ -852,7 +853,7 @@ i.social-at{
 	font-weight:300;
 }
 .service-top ul li a:hover{
-	color:#ff9900;
+	color:#00CC00;
 	padding-left:0.2em;
 }
 .service-top ul li a span{
@@ -873,7 +874,7 @@ i.social-at{
 	text-decoration:none;
 }
 .sed-in h4 a:hover{
-	color:#ff9900;
+	color:#00CC00;
 }
 .sed-in p{
 	margin: 0.5em 0 1em;
@@ -929,7 +930,7 @@ ul.start li a{
 	text-decoration:none;
 	color:#fff;
 	font-size:1.2em;
-	background:#ff9900;
+	background:#00CC00;
 	padding:0.5em 1em;
 }
 ul.start li a:hover{
@@ -965,7 +966,7 @@ ul.start li span{
 	margin: 0.5em 0em;
 }
 .send input[type="submit"]{
-	border: 3px solid #ff9900;
+	border: 3px solid #00CC00;
 	color: #000;
 	font-size:1.4em;
 	width: 15%;
@@ -977,7 +978,7 @@ ul.start li span{
 	-o-transition: 0.5s all;
 }
 .send input[type="submit"]:hover{
-	background: #FF9900;
+	background: #00CC00;
 	color:#fff;	
 }
 .contact {
@@ -997,7 +998,7 @@ ul.start li span{
 }
 .four h2{
 	font-size: 5em;
-	color: #ff9900;
+	color: #00CC00;
 }
 .four h3{
 	font-size:4em;
@@ -1016,7 +1017,7 @@ ul.start li span{
 	text-decoration:none;
 }
 .sign p a:hover{
-	color:#ff9900;
+	color:#00CC00;
 }
 .sign div label{
 	color:#000;
@@ -1038,10 +1039,10 @@ ul.start li span{
 	font-weight:300;
 }
 .sign input[type="text"]:hover,.sign  input[type="password"]:hover{
-	border: 1px solid #ff9900;
+	border: 1px solid #00CC00;
 }
 .sign input[type="submit"]{
-	border: 3px solid #ff9900;
+	border: 3px solid #00CC00;
 	color: #000;
 	font-size:1.4em;
 	width: 15%;
@@ -1053,7 +1054,7 @@ ul.start li span{
 	-o-transition: 0.5s all;
 }
 .sign input[type="submit"]:hover{
-	background: #FF9900;
+	background: #00CC00;
 	color:#fff;	
 }
 .sign {
@@ -1094,7 +1095,7 @@ ul.start li span{
 .top-comment-right ul li a{
 	text-decoration: none;
 	font-size: 1.1em;
-	color: #ff9900;
+	color: #00CC00;
 	transition: 0.5s all;
 	-webkit-transition: 0.5s all;
 	-o-transition: 0.5s all;
@@ -1196,8 +1197,8 @@ ul.start li span{
 	outline:none;
 }
 .table-form input[type="submit"]:hover{
-	background:#ff9900;
-	border:1px solid #ff9900;
+	background:#00CC00;
+	border:1px solid #00CC00;
 	color:#fff;
 }
 .table-form label{
@@ -1230,16 +1231,16 @@ ul.start li span{
 	position:relative;
 }
 .address{
-	background: #ff9900;
-	width: 330px;
-	height: 330px;
+	background: #00CC00;
+	width: 300px;
+	height: 300px;
 	position: absolute;
 	top: 20%;
 	text-align: center;
 	margin: 0 auto;
-	border-radius: 170px;
+	border-radius: 150px;
 	padding: 6em 0;
-	left: 39%;
+	left: 77%;
 }
 .address h5{
 	color: #fff;
@@ -1263,7 +1264,7 @@ a.company{
 }
 /*----*/
 .footer{
-	background:#ff9900;
+	background:#00CC00;
 	padding:2em 0;
 	text-align:center;
 }
@@ -1293,7 +1294,7 @@ a.company{
 	width: 46%;
 }
 .address {
-	left: 36%;
+	left: 67%;
 }
 .top-comment-right {
 	width: 84%;
@@ -1312,7 +1313,7 @@ a.company{
 }
 @media(max-width:768px){
 .header-grid ul li a {
-	font-size: 1.2em;
+	font-size: 0.9em;
 }
 .header-grid ul li label {
 	margin: 0 1px;
@@ -1324,12 +1325,13 @@ a.company{
 	width: 51%;
 }
 .price h2 {
-	font-size: 1.8em;
+	font-size: 1em;
 }
+
 .banner-para p {
-	font-size: 1.2em;
-	padding: 1.8em 0;
-	width: 72%;
+	font-size: 1em;
+	padding: 0.1em 0;
+	width: 95%;
 }
 .look img,.about-top img,.grid-service img{
 	margin:0 auto;
@@ -1339,7 +1341,7 @@ a.company{
 	text-align: center;
 }
 .address {
-	left: 30%;
+	left: 55%;
 }
 .banner-in {
 	min-height: 160px;
@@ -1461,10 +1463,10 @@ p.at-in {
 	font-size: 0.9em;
 }
 .price h2 {
-	font-size: 1.4em;
+	font-size: 1em;
 }
 .banner-para p {
-	width: 86%;
+	width: 95%;
 }
 #filters li span {
 	font-size: 14px;
@@ -1541,7 +1543,7 @@ ul.social-ic {
 	width: 280px;
 	height: 280px;
 	top: 13%;
-	padding: 5em 0;
+	padding: 3em 0;
 	left: 18%;
 }
 .search-in {

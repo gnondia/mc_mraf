@@ -25,14 +25,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<div class="header-top">			
 				<div class="logo">
-					<a href="{{URL::to('/')}}"><img src="{{URL::to('asset')}}/images/logo.png" alt=" " ></a>
+					<a href="{{URL::to('/')}}"><img src="{{URL::to('asset')}}/images/efarmcm.png" alt=" " ></a>
 				</div>
 				<div class="search-in">
 					<div class="header-grid">
 						<ul>
-							<li class="in-up" ><a href="{{URL::to('contact')}}" class="scroll">Contact Us</a> <label>|</label></li>
-							<li class="in-up" ><a href="{{URL::to('login')}}" class="scroll"> Log In </a> <label>|</label></li>
-							<li ><a href="{{URL::to('register')}}" class="scroll">Register </a> <label></label></li>					
+							<li  class="in-up"><a href="{{URL::to('contact')}}" class="scroll">Contact Us</a> <label>|</label></li>
+							<li  ><a href="{{URL::to('login')}}" class="scroll"> Log In </a> <label>|</label></li>
+							<li class="in-up" ><a href="{{URL::to('register')}}" class="scroll">Register </a> <label>|</label></li>
+							<li  ><a href="{{URL::to('translate')}}" class="scroll">ENG&laquo;&raquo;FR </a> <label>|</label></li>					
 						</ul>
 				</div>
 				<div class="search-top">
@@ -91,7 +92,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 			<div class="map-top">
 				<div class="map">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12947831.742778081!2d-95.665!3d37.599999999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited+States!5e0!3m2!1sen!2sin!4v1422444552833" ></iframe>
+					<iframe width="300" height="171" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=GericomGroup,+Molyko-Buea,+Southwest,+Cameroon&amp;aq=0&amp;oq=gericom&amp;sll=4.152935,9.233869&amp;sspn=0.005607,0.010568&amp;doflg=ptk&amp;ie=UTF8&amp;hq=GericomGroup,&amp;hnear=Buea,+Fako,+Southwest,+Cameroon&amp;ll=4.152689,9.288007&amp;spn=0.005607,0.010568&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=10929822959196550114&amp;output=embed"></iframe>
+            		<br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=GericomGroup,+Molyko-Buea,+Southwest,+Cameroon&amp;aq=0&amp;oq=gericom&amp;sll=4.152935,9.233869&amp;sspn=0.005607,0.010568&amp;doflg=ptk&amp;ie=UTF8&amp;hq=GericomGroup,&amp;hnear=Molyko-Buea,+Fako,+Southwest,+Cameroon&amp;ll=4.152689,9.288007&amp;spn=0.005607,0.010568&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=10929822959196550114" style="color:#0000FF;text-align:left"></a></small>
 				</div>
 					<div class="address">
 						<h5>Address</h5>
