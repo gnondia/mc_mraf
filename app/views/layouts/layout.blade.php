@@ -33,7 +33,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li  class="in-up"><a href="{{URL::to('contact')}}" class="scroll">Contact Us</a> <label>|</label></li>
 							<li  ><a href="{{URL::to('login')}}" class="scroll"> Log In </a> <label>|</label></li>
 							<li class="in-up" ><a href="{{URL::to('register')}}" class="scroll">Register </a> <label>|</label></li>
-							<li  ><a href="{{URL::to('translate')}}" class="scroll">ENG&laquo;&raquo;FR </a> <label>|</label></li>					
+							<li  ><a href="{{URL::to('#')}}" class="scroll">ENG&laquo;&raquo;FR </a></li>					
 						</ul>
 				</div>
 				<div class="search-top">
