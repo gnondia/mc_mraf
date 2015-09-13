@@ -6,6 +6,13 @@
 |--------------------------------------------------------------------------
 */
 
+//setting up the language for entire website
+// setting up language
+Route::get('language/{language}', function ($language) {
+	  Session::put('lang', $language);
+      return Redirect::back();
+});
+
 //route to the home page
 Route::get('/', function()
 {
