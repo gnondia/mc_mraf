@@ -56,7 +56,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="top-nav">
 					<span class="menu"><img src="{{URL::to('asset')}}/images/menu.png" alt="" > </span>
 					<ul>
-						<li ><a href="about.html">About Us</a></li>
+						<li ><a href="{{URL::to('about')}}">About Us</a></li>
 						<li><a href="product.html" > Products</a></li>
 						<li><a href="services.html" > Services </a></li>
 						<li><a href="404.html" >Daily Market</a></li>
@@ -95,19 +95,69 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<iframe width="300" height="171" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=GericomGroup,+Molyko-Buea,+Southwest,+Cameroon&amp;aq=0&amp;oq=gericom&amp;sll=4.152935,9.233869&amp;sspn=0.005607,0.010568&amp;doflg=ptk&amp;ie=UTF8&amp;hq=GericomGroup,&amp;hnear=Buea,+Fako,+Southwest,+Cameroon&amp;ll=4.152689,9.288007&amp;spn=0.005607,0.010568&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=10929822959196550114&amp;output=embed"></iframe>
             		<br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=GericomGroup,+Molyko-Buea,+Southwest,+Cameroon&amp;aq=0&amp;oq=gericom&amp;sll=4.152935,9.233869&amp;sspn=0.005607,0.010568&amp;doflg=ptk&amp;ie=UTF8&amp;hq=GericomGroup,&amp;hnear=Molyko-Buea,+Fako,+Southwest,+Cameroon&amp;ll=4.152689,9.288007&amp;spn=0.005607,0.010568&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=10929822959196550114" style="color:#0000FF;text-align:left"></a></small>
 				</div>
-					<div class="address">
+					<!-- <div class="address">
 						<h5>Address</h5>
-						<p>UB Street, Buea</p>
+						<p>Mile 17 Moto Park, Buea</p>
 						<a href="#" class="company">info@gericomgroup.com</a>
-					</div>
+					</div> -->
 				</div>
 			</div>
 			<!--footer-->
-			<div class="footer">
-				<div class="container">
-					 <p class="footer-grid">Copyright &copy; 2015 by Gericom Group </p>
-			 	</div> 	
+	<footer>
+		<div id="footer">
+			
+            <!--footer-text-->
+            <div class="footer-text">
+                  
+					<!-- footer-left -->
+					<div class="footer-left">
+						<h4>Information </h4>
+						<ul>
+							<li><a href="#">Specials</a></li>
+							<li><a href="#">New Products</a></li>
+							<li><a href="#">Top Sellers</a></li>
+							<li><a href="#">Contact Us</a></li>
+							<li><a href="#">About Us</a></li>
+							<li><a href="#">Sitemap</a></li>
+						</ul>
+					</div>
+					<!-- end of footer-left -->
+					
+					<!-- footer-center -->
+					<div class="footer-center">
+					
+						<h4>My eFarm </h4>
+						<ul>
+							<li><a href="#">My Orders</a></li>
+							<li><a href="#">My Credit Slipt</a></li>
+							<li><a href="#">My Address</a></li>
+							<li><a href="#">My Personal info</a></li>
+							<li><a href="#">My favorite product</a></li>
+						</ul>
+					</div>
+					<!-- end of footer-center -->
+					
+					<!-- footer right -->
+					<div class="footer-right">
+					
+						<h4>Follow us </h4>
+						<ul>
+							<li><a href="#"><img src="{{URL::to('asset')}}/images/fb.png" />  &nbsp&nbsp Facebook</a></li>
+							<li><a href="#"><img src="{{URL::to('asset')}}/images/tw.png" />  &nbsp&nbsp Twitter</a></li>
+							<li><a href="#"><img src="{{URL::to('asset')}}/images/rss.png" /> &nbsp;&nbsp RSS</a></li>
+						</ul>
+					
+					</div>
+					<!-- end of footer-right -->
+            </div>
+            <!--end of footer-text-->
+            
 			</div>
-
+			<!-- end of footer -->
+			</div>
+			<div class="footer2">
+						 <p class="footer-grid">Copyright &copy; 2015 by Gericom Group </p>
+			</div>
+    </footer>
 </body>
 </html>

@@ -12,11 +12,11 @@
 				
 				<div>
 					<label>Email</label>
-					<input type="text" value=" " name="">
+					<input type="text" value="" name="">
 				</div>
 				<div>
 					<label>Password</label>
-					<input type="password" value=" " name="">
+					<input type="password" value="" name="">
 				</div>
 				<p><a href="#">Forgot Password ?</a></p>
 					<input type="submit" value="submit">		

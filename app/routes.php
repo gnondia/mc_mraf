@@ -26,3 +26,8 @@ Route::get('/login', function(){
 Route::get('/contact', function(){
 	return View::make('pages/contactus');
 });
+
+//route to about us page
+Route::get('/about', function(){
+	return View::make('pages/aboutus');
+});
