@@ -55,7 +55,7 @@
 				<div class="top-nav">
 					<span class="menu"><img src="{{URL::to('asset')}}/images/menu.png" alt="" > </span>
 					<ul>
-						<li ><a href="about.html">About Us</a></li>
+						<li ><a href="{{URL::to('about')}}">About Us</a></li>
 						<li><a href="product.html" > {{Lang::get('layout.products')}}</a></li>
 						<li><a href="services.html" > Services </a></li>
 						<li><a href="404.html" >Daily Market</a></li>

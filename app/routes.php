@@ -2,7 +2,7 @@
 
 /*
 |--------------------------------------------------------------------------
-| Application Routes
+| Application Routes, Public View routes.
 |--------------------------------------------------------------------------
 */
 
@@ -32,6 +32,13 @@ Route::get('/login', function(){
 //route to contact us page
 Route::get('/contact', function(){
 	return View::make('pages/contactus');
+});
+
+Route::post('/sendMessage', 'ActivitiesController@sendMessage')->before('csrf');
+
+//route to the about us page
+Route::get('/about', function(){
+	return View::make('pages/about');
 });
 
 //controller to handle session things; login, logout ...
