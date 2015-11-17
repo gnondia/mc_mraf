@@ -2,12 +2,13 @@
 
 @section('content')
 <div class="about-content">
-<img class="img-about" src="{{URL::to('asset')}}/images/about.png" alt=" About Us " >
+<img class="img-about" src="{{URL::to('asset')}}/images/about.png" alt="About Us " >
 <div class="about-intro">
-<h4>About Us</h4>
+<h4>{{Lang::get('about.abtus')}}</h4>
 <section>
 <p>
-	eFarm.cm powered by <b>GericomGroup</b> is a web and mobile agricultural platform where users(farmers, customers, companies, etc) can post products for sale and/or buy the posted agricultural products. eFarm.cm is uniquely for agricultural products in Cameroon, Africa and the rest of World. 
+	{{Lang::get('about.us')}}, 
+	 <b>GericomGroup</b> is a web and mobile agricultural platform where users(farmers, customers, companies, etc) can post products for sale and/or buy the posted agricultural products. eFarm.cm is uniquely for agricultural products in Cameroon, Africa and the rest of World. 
 </p>
 <p>
 	The SOLE reason eFarm.cm was created is to help the farmers in the communities of Cameroon market their farm products online, to be able to reach customers and consumers around Cameroon, Africa and the rest of the World. Agriculture remain a backbone of Cameroon’s economy, employing 70 percent of its workforce, while providing 42 percent of its GDP and 30 percent of its export revenue (https://en.wikipedia.org/wiki/Agriculture_in_Cameroon).<br /> These numbers are still increasing with the need to MARKET these agricultural products such as  cocoa, coffee, cotton, bananas, rubber, palm oil and kernels, peanuts, plantains, cassava, corn, etc.
@@ -19,7 +20,7 @@
 	eFarm.cm has been describe as ”eBay for agricultural products” by the Founder of eFarm.cm – Gerald NONDIA. 
 </p>
 </section>
-<img src="{{URL::to('asset')}}/images/abouttext.png" alt=" About Us ">
+<img src="{{URL::to('asset')}}/images/abouttext.png" alt="About Us ">
 </div>
 </div>
 @stop

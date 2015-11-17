@@ -71,8 +71,8 @@
 							<a href="single.html" class="btn  btn-1c">Learn More</a>
 						</div>
 						<div class="clearfix"> </div>
-						</div>			
-						<div class="content-top">
+					</div>			
+					<div class="content-top">
 						<div class="col-md-3 look">
 							<h4><a href="single.html">Internet tend to repeat </a></h4>
 							<a href="single.html"><img class="img-responsive" src="{{URL::to('asset')}}/images/pi4.jpg" alt=" " ></a>
@@ -99,7 +99,7 @@
 						</div>
 						<div class="clearfix"> </div>
 					</div>
-					</div>
+				</div>
 				</div>
 				<!---->
 				<!---->

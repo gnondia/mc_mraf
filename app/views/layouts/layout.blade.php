@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{App::setLocale(Session::get('lang', 'en'))}}">
 <head>
 <title>Efarm :: Sell Your Farm Product Online</title>
 <link href="{{URL::to('asset')}}/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
@@ -11,8 +11,7 @@
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Vegetables Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<meta name="keywords" content="Efarm" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--fonts-->
 <link href='http://fonts.googleapis.com/css?family=Exo:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
@@ -29,12 +28,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<div class="search-in">
 					<div class="header-grid">
+					@if(Auth::user())
 						<ul>
-							<li  class="in-up"><a href="{{URL::to('contact')}}" class="scroll">Contact Us</a> <label>|</label></li>
-							<li  ><a href="{{URL::to('login')}}" class="scroll"> Log In </a> <label>|</label></li>
-							<li class="in-up" ><a href="{{URL::to('register')}}" class="scroll">Register </a> <label>|</label></li>
-							<li  ><a href="{{URL::to('translate')}}" class="scroll">ENG&laquo;&raquo;FR </a> <label>|</label></li>					
+							<li  >{{Auth::user()->email}} <span class="caret hidden-xs"></span> <label class="hidden-xs">|</label></li>
+							<li class="in-up" ><a href="{{URL::to('logout')}}" class="scroll">Logout </a> <label>|</label></li>
+							<li class="hidden-xs"><a href="{{URL::to('language')}}/en" class="scroll">ENG </a> | 
+							<a href="{{URL::to('language')}}/fr" class="scroll">FRE </a></li>
 						</ul>
+					@else
+						<ul>
+							<li  ><a href="{{URL::to('login')}}" class="scroll"> {{Lang::get('layout.login')}} </a> <label>|</label></li>
+							<li class="in-up" ><a href="{{URL::to('register')}}" class="scroll">{{Lang::get('layout.register')}} </a> <label>|</label></li>
+							<li class="hidden-xs"><a href="{{URL::to('language')}}/en" class="scroll">ENG </a> | 
+							<a href="{{URL::to('language')}}/fr" class="scroll">FRE </a></li>
+						</ul>
+					@endif
 				</div>
 				<div class="search-top">
 					<div class="search">
@@ -56,12 +64,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="top-nav">
 					<span class="menu"><img src="{{URL::to('asset')}}/images/menu.png" alt="" > </span>
 					<ul>
-						<li ><a href="{{URL::to('about')}}">About Us</a></li>
-						<li><a href="product.html" > Products</a></li>
-						<li><a href="services.html" > Services </a></li>
-						<li><a href="404.html" >Daily Market</a></li>
-						<li><a href="blog.html" > Blog </a></li>
-						<li><a href="{{URL::to('contact')}}" > Contact </a></li>
+						<li ><a href="{{URL::to('about')}}" >{{Lang::get('layout.about')}} </a></li>
+						<li><a href="{{URL::to('products')}}" > {{Lang::get('layout.products')}}</a></li>
+						<li><a href="#" > Services </a></li>
+						<li><a href="#" >{{Lang::get('layout.Daily Market')}}</a></li>
+						<li><a href="#" > Blog </a></li>
+						<li><a href="{{URL::to('contact')}}" > {{Lang::get('layout.contactus')}} </a></li>
 					</ul>	
 				<script>
 					$("span.menu").click(function(){
