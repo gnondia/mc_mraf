@@ -28,30 +28,30 @@
 					<div class="contact-grid">
 						<div class="col-md-6 contact-us">
 							@if(Auth::user())
-								<input type="text" name="name" value="{{$contact->name . ' ' . $contact->sname}}" onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Name';}">
+								<input type="text" name="name" value="{{$contact->name . ' ' . $contact->sname}}" placeholder="Full name....">
 							@else
-								<input type="text" name="name" value="Name" onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Name';}">
+								<input type="text" name="name" placeholder="Enter your full name....">
 							@endif
 						</div>
 						<div class="col-md-6 contact-us">
 							@if(Auth::user())
-								<input type="text" name="email" value="{{$contact->email}}" onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Email-id';}">
+								<input type="text" name="email" value="{{$contact->email}}">
 							@else
-								<input type="text" name="email" value="Email-id" onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Email-id';}">
+								<input type="text" name="email" placeholder="Email (e.g. example@domain.com)">
 							@endif
 						</div>
 						<div class="clearfix"> </div>
 					</div>
 					<div class="contact-grid">
 						<div class="col-md-6 contact-us">
-							<input type="text" name="url" value="URL" onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'URL';}">
+							<input type="text" name="url" placeholder="Enter a link, exclude (http://, https:// etc...">
 						</div>
 						<div class="col-md-6 contact-us">
-							<input type="text" name="subject" value="Subject" onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Subject';}">
+							<input type="text" name="subject" placeholder="Subject of your message...">
 						</div>
 						<div class="clearfix"> </div>
 					</div>
-					<textarea cols="77" rows="6" name="message" value=" " onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
+					<textarea cols="77" rows="6" name="message" placeholder="Type your message here....."></textarea>
 					<div class="send ">
 						<input type="submit" value="SEND" >
 					</div>

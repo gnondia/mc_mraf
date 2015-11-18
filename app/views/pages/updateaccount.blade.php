@@ -25,7 +25,7 @@
 		            @endif 
 
 					<h3>Register </h3>
-					{{Form::open(array('url'=>'register_user', 'class' => 'form-horizontal'))}}
+					{{Form::open(array('url'=>'#', 'class' => 'form-horizontal'))}}
 						<div>
 							<div class="col">
 								<label >Name</label>  
@@ -36,27 +36,8 @@
 								<input type="text" name="sname" placeholder=" Your surname"> <!-- Surmane -->
 							</div>
 						</div>
-						
-						<div>
-							<div class="col">
-								<label >Email</label>  
-								<input type="text" name="email" placeholder=" enter email..."> <!--Email -->
-							</div>
-							<div class="col">
-								<label >Confirm Email</label>
-								<input type="text" name="cename" placeholder=" confirm email...."> <!-- Confirm Email -->
-							</div> 
-						</div> 
-						<br />
-						<div class="col">
-							<label>Password</label>
-							<input type="password" name="password" placeholder=" enter your password....">
-						</div>
-						<div class="col">
-							<label>Confirmation</label>
-							<input type="password" name="cpassword" placeholder=" confirm your password....">
-						</div>
-							<input type="submit" value="submit">		
+
+						<input type="submit" value="submit">		
 				{{Form::close()}}
 				</div>
 			</div>

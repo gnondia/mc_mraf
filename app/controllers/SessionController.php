@@ -28,7 +28,7 @@ class SessionController extends BaseController {
 			$user->activation_key = bin2hex(openssl_random_pseudo_bytes(16));
 			$user->save();
 			// send activation link
-			$mailData = array(
+			/*$mailData = array(
 				'name'=> Input::get('name'),
 				'link'=> $user->activation_key
 				);
@@ -38,7 +38,7 @@ class SessionController extends BaseController {
 					$message->subject("efarm account activation");
 					$message->to(Input::get('email'));
 				}
-			);
+			);*/
 			return Redirect::to('/login')->with('alertMessage',"Account Created Successfully, Login");
 		}
 		if($registerValidator->fails())
@@ -46,6 +46,7 @@ class SessionController extends BaseController {
 			return Redirect::back()->withInput()->withErrors($registerValidator);
 		}
 	}
+
 	public function handleLogin()
 	{
 		if (Auth::attempt(array('email' => Input::get('email'), 'password' => Input::get('password'))))

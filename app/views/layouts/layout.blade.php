@@ -30,14 +30,16 @@
 					<div class="header-grid">
 					@if(Auth::user())
 						<ul>
-							<li  >{{Auth::user()->email}} <span class="caret hidden-xs"></span> <label class="hidden-xs">|</label></li>
+							<li><a href="{{URL::to('/account/account_update')}}">{{Auth::user()->email}} <span class="caret hidden-xs">
+							<!-- <button type="button" class="btn btn-lg btn-success" data-toggle="modal" data-target="#exampleModal">{{ucfirst(Lang::get('board.application'))}}</button> -->
+						</span></a> <label class="hidden-xs">|</label></li>
 							<li class="in-up" ><a href="{{URL::to('logout')}}" class="scroll">Logout </a> <label>|</label></li>
 							<li class="hidden-xs"><a href="{{URL::to('language')}}/en" class="scroll">ENG </a> | 
 							<a href="{{URL::to('language')}}/fr" class="scroll">FRE </a></li>
 						</ul>
 					@else
 						<ul>
-							<li  ><a href="{{URL::to('login')}}" class="scroll"> {{Lang::get('layout.login')}} </a> <label>|</label></li>
+							<li  ><a href="{{URL::to('login')}}" class="scroll"> {{Lang::get('layout.login')}} </a> <label class="hidden-xs">|</label></li>
 							<li class="in-up" ><a href="{{URL::to('register')}}" class="scroll">{{Lang::get('layout.register')}} </a> <label>|</label></li>
 							<li class="hidden-xs"><a href="{{URL::to('language')}}/en" class="scroll">ENG </a> | 
 							<a href="{{URL::to('language')}}/fr" class="scroll">FRE </a></li>
@@ -47,7 +49,7 @@
 				<div class="search-top">
 					<div class="search">
 					<form>
-						<input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" >
+						<input type="text" name="query" placeholder="Search here...." >
 						<input type="submit"  value="">
 					</form>
 				</div>
@@ -65,10 +67,10 @@
 					<span class="menu"><img src="{{URL::to('asset')}}/images/menu.png" alt="" > </span>
 					<ul>
 						<li ><a href="{{URL::to('about')}}" >{{Lang::get('layout.about')}} </a></li>
-						<li><a href="{{URL::to('products')}}" > {{Lang::get('layout.products')}}</a></li>
+						<li><a href="{{URL::to('product/products')}}" > {{Lang::get('layout.products')}}</a></li>
 						<li><a href="#" > Services </a></li>
 						<li><a href="#" >{{Lang::get('layout.Daily Market')}}</a></li>
-						<li><a href="#" > Blog </a></li>
+						<li><a href="{{URL::to('postblog')}}" > Blog </a></li>
 						<li><a href="{{URL::to('contact')}}" > {{Lang::get('layout.contactus')}} </a></li>
 					</ul>	
 				<script>
@@ -110,6 +112,48 @@
 					</div> -->
 				</div>
 			</div>
+
+			<div class="modal fade" id="UpdateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  </div>
+                  <div class="modal-body">
+                    {{Form::open(array('url'=>'apply','role'=>'form','class'=>'application','enctype'=>'multipart/form-data'))}}
+                      <div class="form-group">
+                        <label for="recipient-name" class="control-label">name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="recipient-name" class="control-label">email</label>
+                        <input type="text" class="form-control" id="email" name="email" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="recipient-name" class="control-label">phone</label>
+                        <input type="number" class="form-control" id="phone" name="phone" required>
+                    </div>
+                      <div class="form-group">
+                        <label for="recipient-name" class="control-label">resume (cv)</label>
+                        <input type="file" class="form-control" id="resume_file" name="resume_file">
+                      </div>
+                      <div class="form-group">
+                        <label for="message-text" class="control-label">cover letter</label>
+                        <textarea class="form-control" id="cover_letter" name="cover_letter" required></textarea>
+                      </div>
+                      <p>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">cancel</button>
+                        <button type="submit" class="btn btn-primary">send application</button>
+                        <br>
+                      </p>
+                      {{Form::close()}}
+                  </div>
+                  <div class="modal-footer">
+                  </div>
+                </div>
+              </div>
+            </div>
+
 			<!--footer-->
 	<footer>
 		<div id="footer">
@@ -124,8 +168,8 @@
 							<li><a href="#">Specials</a></li>
 							<li><a href="#">New Products</a></li>
 							<li><a href="#">Top Sellers</a></li>
-							<li><a href="#">Contact Us</a></li>
-							<li><a href="#">About Us</a></li>
+							<li><a href="{{URL::to('contact')}}">Contact Us</a></li>
+							<li><a href="{{URL::to('about')}}">About Us</a></li>
 							<li><a href="#">Sitemap</a></li>
 						</ul>
 					</div>
@@ -150,8 +194,8 @@
 					
 						<h4>Follow us </h4>
 						<ul>
-							<li><a href="#"><img src="{{URL::to('asset')}}/images/fb.png" />  &nbsp&nbsp Facebook</a></li>
-							<li><a href="#"><img src="{{URL::to('asset')}}/images/tw.png" />  &nbsp&nbsp Twitter</a></li>
+							<li><a href="http://www.facebook.com/" target="_blank"><img src="{{URL::to('asset')}}/images/fb.png" />  &nbsp&nbsp Facebook</a></li>
+							<li><a href="http://www.twitter.com/" target="_blank"><img src="{{URL::to('asset')}}/images/tw.png" />  &nbsp&nbsp Twitter</a></li>
 							<li><a href="#"><img src="{{URL::to('asset')}}/images/rss.png" /> &nbsp;&nbsp RSS</a></li>
 						</ul>
 					
@@ -163,8 +207,8 @@
 			</div>
 			<!-- end of footer -->
 			</div>
-			<div class="footer2">
-						 <p class="footer-grid">Copyright &copy; 2015 by Gericom Group </p>
+			<div class="footer2" style="height:70px">
+						 <p class="footer-grid" style="padding-top:25px;">Copyright &copy; <strong><?php echo date('Y'); ?></strong> by Gericom Group </p>
 			</div>
     </footer>
 </body>

@@ -23,20 +23,15 @@
             </div>
             @endif 
 
-			<h3> Log In </h3>
-			{{Form::open(array('url'=>'login_user', 'class' => 'form-horizontal'))}}
+			<h3> Reset your password </h3><br />
+			{{Form::open(array('url'=>'#', 'class' => 'form-horizontal'))}}
 				
 				<div>
 					<label>Email</label>
-					<input type="text" value="" name="email">
-				</div>
-				<div>
-					<label>Password</label>
-					<input type="password" value="" name="password">
+					<input type="text" value="" name="email" placeholder="Enter your email here.....">
 				</div>
 
-				<p><a href="{{URL::to('forgotpassword')}}">Forgot Password ?</a></p>
-					<input type="submit" value="submit">		
+				<input type="submit" value="submit">		
 			{{Form::close()}}
 			</div>
 </div>

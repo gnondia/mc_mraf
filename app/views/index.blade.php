@@ -1,6 +1,13 @@
 @extends('layouts.layout')
 
 @section('content')
+
+@if(Session::has('alertError'))
+	<div class="alert alert-danger alert-dismissible fade in" role="alert" style="width:98%; position:relative;left:10px;">
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		<strong>{{Session::get('alertError')}}</strong>
+	</div>
+@endif 
 <div  id="top" class="callbacks_container">
 			      <ul class="rslides" id="slider">
 			        <li>
@@ -47,55 +54,55 @@
 				<div class="top-content">
 					<div class="content-top">
 						<div class="col-md-3 look">
-							<h4><a href="single.html">Internet tend to repeat </a></h4>
+							<h4><a href="single.html">Product you will like </a></h4>
 							<a href="single.html"><img class="img-responsive" src="{{URL::to('asset')}}/images/pi.jpg" alt=" " ></a>
-							<p>content here', making it look like readable English. Many desktop publishing packages </p>
-							<a href="single.html" class="btn  btn-1c">Learn More</a>
+							<p>This is just a sample product and if you will like to buy, just click on the buy product button below. Enjoy </p>
+							<a href="single.html" class="btn  btn-1c">Buy Product</a>
 						</div>
 						<div class="col-md-3 look">
-							<h4><a href="single.html">Internet tend to repeat </a></h4>
+							<h4><a href="single.html">Product you will like </a></h4>
 							<a href="single.html"><img class="img-responsive" src="{{URL::to('asset')}}/images/pi1.jpg" alt=" " ></a>
-							<p>content here', making it look like readable English. Many desktop publishing packages </p>
-							<a href="single.html" class="btn  btn-1c">Learn More</a>
+							<p>This is just a sample product and if you will like to buy, just click on the buy product button below. Enjoy </p>
+							<a href="single.html" class="btn  btn-1c">Buy Product</a>
 						</div>
 						<div class="col-md-3 look">
-							<h4><a href="single.html">Internet tend to repeat </a></h4>
+							<h4><a href="single.html">Product you will like </a></h4>
 							<a href="single.html"><img class="img-responsive" src="{{URL::to('asset')}}/images/pi2.jpg" alt=" " ></a>
-							<p>content here', making it look like readable English. Many desktop publishing packages </p>
-							<a href="single.html" class="btn  btn-1c">Learn More</a>
+							<p>This is just a sample product and if you will like to buy, just click on the buy product button below. Enjoy </p>
+							<a href="single.html" class="btn  btn-1c">Buy Product</a>
 						</div>
 						<div class="col-md-3 look">
-							<h4><a href="single.html">Internet tend to repeat </a></h4>
+							<h4><a href="single.html">Product you will like </a></h4>
 							<a href="single.html"><img class="img-responsive" src="{{URL::to('asset')}}/images/pi3.jpg" alt=" " ></a>
-							<p>content here', making it look like readable English. Many desktop publishing packages </p>
-							<a href="single.html" class="btn  btn-1c">Learn More</a>
+							<p>This is just a sample product and if you will like to buy, just click on the buy product button below. Enjoy </p>
+							<a href="single.html" class="btn  btn-1c">Buy Product</a>
 						</div>
 						<div class="clearfix"> </div>
 					</div>			
 					<div class="content-top">
 						<div class="col-md-3 look">
-							<h4><a href="single.html">Internet tend to repeat </a></h4>
+							<h4><a href="single.html">Product you will like </a></h4>
 							<a href="single.html"><img class="img-responsive" src="{{URL::to('asset')}}/images/pi4.jpg" alt=" " ></a>
-							<p>content here', making it look like readable English. Many desktop publishing packages </p>
-							<a href="single.html" class="btn  btn-1c">Learn More</a>
+							<p>This is just a sample product and if you will like to buy, just click on the buy product button below. Enjoy </p>
+							<a href="single.html" class="btn  btn-1c">Buy Product</a>
 						</div>
 						<div class="col-md-3 look">
-							<h4><a href="single.html">Internet tend to repeat </a></h4>
+							<h4><a href="single.html">Product you will like </a></h4>
 							<a href="single.html"><img class="img-responsive" src="{{URL::to('asset')}}/images/pi5.jpg" alt=" " ></a>
-							<p>content here', making it look like readable English. Many desktop publishing packages </p>
-							<a href="single.html" class="btn  btn-1c">Learn More</a>
+							<p>This is just a sample product and if you will like to buy, just click on the buy product button below. Enjoy </p>
+							<a href="single.html" class="btn  btn-1c">Buy Product</a>
 						</div>
 						<div class="col-md-3 look">
-							<h4><a href="single.html">Internet tend to repeat </a></h4>
+							<h4><a href="single.html">Product you will like </a></h4>
 							<a href="single.html"><img class="img-responsive" src="{{URL::to('asset')}}/images/pi6.jpg" alt=" " ></a>
-							<p>content here', making it look like readable English. Many desktop publishing packages </p>
-							<a href="single.html" class="btn  btn-1c">Learn More</a>
+							<p>This is just a sample product and if you will like to buy, just click on the buy product button below. Enjoy </p>
+							<a href="single.html" class="btn  btn-1c">Buy Product</a>
 						</div>
 						<div class="col-md-3 look">
-							<h4><a href="single.html">Internet tend to repeat </a></h4>
+							<h4><a href="single.html">Product you will like </a></h4>
 							<a href="single.html"><img class="img-responsive" src="{{URL::to('asset')}}/images/pi7.jpg" alt=" " ></a>
-							<p>content here', making it look like readable English. Many desktop publishing packages </p>
-							<a href="single.html" class="btn  btn-1c">Learn More</a>
+							<p>This is just a sample product and if you will like to buy, just click on the buy product button below. Enjoy </p>
+							<a href="single.html" class="btn  btn-1c">Buy Product</a>
 						</div>
 						<div class="clearfix"> </div>
 					</div>
