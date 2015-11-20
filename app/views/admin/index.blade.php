@@ -12,7 +12,7 @@
 
 					<h2 class="col-md-offset-3">Add a product</h2>
 					<br />
-					{{Form::open(array('url'=>'admin/addproduct', 'class' => 'form-horizontal', 'enctype'=>'multipart/form-data'))}}
+					{{Form::open(array('url'=>'admin/addproduct', 'class' => 'form-horizontal', 'files' => true, 'method' => 'post'))}}
 						<fieldset>
 
 						@if(Session::has('alertMessage'))
@@ -59,7 +59,8 @@
 		                <div class="form-group">
 		                  <div class="col-lg-8" style="width: 59%;">
 		                  	<label class="hidden-xs">Product picture</label>
-		                    <input type="file" class="form-control hidden-xs" name="prod_picture" placeholder=" Product picture">
+		                    <!-- <input type="file" class="form-control hidden-xs" name="prod_picture" placeholder=" Product picture"> -->
+		                    {{Form::file('prod_picture', array('class' => 'form-control hidden-xs'))}}
 		                    <span class="badge alert-danger">{{ ($errors->has('prod_picture') ? $errors->first('prod_picture') : '') }}</span>
 		                  </div>
 		                </div>

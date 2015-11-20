@@ -32,7 +32,8 @@
 						<ul>
 							<li><a href="{{URL::to('/account/account_update')}}">{{Auth::user()->email}} <span class="caret hidden-xs">
 							<!-- <button type="button" class="btn btn-lg btn-success" data-toggle="modal" data-target="#exampleModal">{{ucfirst(Lang::get('board.application'))}}</button> -->
-						</span></a> <label class="hidden-xs">|</label></li>
+						</span></a> 
+						<label class="hidden-xs">|</label></li>
 							<li class="in-up" ><a href="{{URL::to('logout')}}" class="scroll">Logout </a> <label>|</label></li>
 							<li class="hidden-xs"><a href="{{URL::to('language')}}/en" class="scroll">ENG </a> | 
 							<a href="{{URL::to('language')}}/fr" class="scroll">FRE </a></li>
@@ -70,7 +71,7 @@
 						<li><a href="{{URL::to('product/products')}}" > {{Lang::get('layout.products')}}</a></li>
 						<li><a href="#" > Services </a></li>
 						<li><a href="#" >{{Lang::get('layout.Daily Market')}}</a></li>
-						<li><a href="{{URL::to('postblog')}}" > Blog </a></li>
+						<li><a href="{{URL::to('blogs')}}" > Blog </a></li>
 						<li><a href="{{URL::to('contact')}}" > {{Lang::get('layout.contactus')}} </a></li>
 					</ul>	
 				<script>
@@ -155,6 +156,19 @@
             </div>
 
 			<!--footer-->
+			<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-564f2b050082a054" async="async"></script>
+<script src="http://code.jquery.com/jquery-1.5.js"></script>
+    <script>
+      function countChar(val) {
+        var len = val.value.length;
+        if (len >= 500) {
+          val.value = val.value.substring(0, 500);
+        } else {
+          $('#charNum').text(500 - len + " characters left");
+        }
+      };
+    </script>
 	<footer>
 		<div id="footer">
 			

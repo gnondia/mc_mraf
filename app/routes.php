@@ -65,6 +65,18 @@ Route::get('/forgotpassword', function(){
 	return View::make('pages/forgotpassword');
 });
 
+Route::get('/blogs', function(){
+	$blog = Blog::all();
+	if($blog->count() == 0){
+		return View::make('pages/postblog');
+	} 
+	else
+	{
+		$data['blogs'] = Blog::paginate(2);
+		return View::make('pages/recentblogs')->with($data);
+	}
+});
+
 Route::get('/postblog', function(){
 	return View::make('pages/postblog');
 });
@@ -81,6 +93,9 @@ Route::get('/product/products', function(){
 //controller to handle session things; login, logout ...
 Route::post('/register_user', 'SessionController@handleRegister')->before('csrf');
 Route::post('/login_user', 'SessionController@handleLogin')->before('csrf');
+
+//handle the bloggin
+Route::post('/post_blog', 'BlogController@postBlog')->before('crsf');
 
 //get update information page
 Route::get('/account/accout_update', function(){
@@ -144,11 +159,14 @@ Route::post('/admin/addproduct', function(){
 			'phone' => 'required',
 			'measurement' => 'required',
 			'quantity' => 'required',
+			'prod_picture' => 'required',
 			);
 		$productValidator = Validator::make($productData,$productRules);
 		if( $productValidator->fails()) {
 			return Redirect::back()->withInput()->withErrors($productValidator);
 		}
+
+		//return var_dump(Input::file('prod_picture'));
 
 		$product = new Product();
 		$product->name = Input::get('pname');
@@ -159,15 +177,19 @@ Route::post('/admin/addproduct', function(){
 		$product->measurement = Input::get('measurement');
 		$product->quantity_in_stock = Input::get('quantity');
 
-		if(Input::hasFile('picture')){
+		if(Input::hasFile('prod_picture')){
 	        $rulesForFile = array(
-	            'prod_picture' => 'max:1000|required|mimes:jpeg,jpg,png',
+	            'prod_picture' => 'mimes:jpeg,jpg,png',
 	        );
 
 	        $validatorForFile = Validator::make(Input::all(), $rulesForFile);
 	        $fileName = $productData['prod_picture'];
-	        Input::file('prod_picture')->move('products/', $fileName);
-	        $products->picture = $fileName;
+	        try {
+	        	Input::file('prod_picture')->move('products/', $fileName);
+	        	$products->picture = $fileName;
+	        } catch (Exception $e) {
+	        	throw new Exception("Picture was not moved....", 1);
+	        }
 	    }
 		$product->save();
 

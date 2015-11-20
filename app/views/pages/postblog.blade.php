@@ -7,43 +7,40 @@
     <strong>{{Session::get('alertError')}}</strong>
   </div>
 @endif 
-<div class="col-md-10 col-md-offset-1">
-  <div class="panel panel-success">
+<div class="col-md-7 col-md-offset-1">
+  <div class="panel panel-default">
     <div class="panel-heading"><h4>Post new blog</h4></div>
     <div class="panel-body"> 
-      <p>
-        {{Form::open(array('url'=>'#', 'class'=>'form-horizontal', 'enctype'=>'multipart/form-data'))}}
-        <fieldset>
-
-          <div class="form-group">
-          <br /><br />
-            <label class="col-lg-2 control-label">Blog Title</label>
-            <div class="col-lg-10">
-              <input value="{{ Input::old('title') != NULL ? Input::old('title') : '' }}" type="text" class="form-control" name="title" 
-              placeholder="Title of blog...">
-              <span class="badge alert-danger">{{ ($errors->has('title') ? $errors->first('title') : '') }}</span>
-              <br /><br />
+        {{Form::open(array('url'=>'post_blog', 'class'=>'form-horizontal'))}}
+        <div class="form-group">
+            <label for="name" class="col-md-2 control-label">Your Name</label>
+            <div class="col-md-10">
+                <input type="text" class="form-control" name="name" autofocus="autofocus" placeholder="Enter your name"><br />
             </div>
-          </div>
-
-          <div class="form-group">
-            <label class="col-lg-2 control-label">Blog Content</label>
-            <div class="col-lg-10">
-              <textarea class="form-control" name="content" rows="10" placeholder="Content of blog...">{{ Input::old('content') != NULL ? Input::old('content') : '' }}</textarea>
-              <span class="badge alert-danger">{{ ($errors->has('content') ? $errors->first('content') : '') }}</span>
+        </div>
+        <div class="form-group">
+            <label for="title" class="col-md-2 control-label">Title</label>
+            <div class="col-md-10">
+                <input type="text" class="form-control" name="title" autofocus="autofocus" placeholder="Blog title..."><br />
             </div>
-          </div>
-
-          <div class="form-group">
-            <div class="col-lg-10 col-lg-offset-2">
-              <button type="submit" class="btn btn-primary pull-right">Post blog</button>
+        </div>
+        <div class="form-group">
+            <label for="content" class="col-md-2 control-label">Blog Content</label>
+            <div class="col-md-10">
+                <textarea id="field" onkeyup="countChar(this)" class="form-control" rows="8" name="content" autofocus="autofocus" placeholder="Blog content...."></textarea>
+                <div id="charNum"></div>
             </div>
-          </div>        
-
-        </fieldset>
+        </div>
+        <div class="form-group">
+            <div class="col-md-10 col-md-offset-2">
+                <input id="submit" name="submit" type="submit" value="Send" class="btn btn-success pull-right">
+            </div>
+        </div>
         {{Form::close()}}
-      </p>
     </div><!--/panel-body-->
-  </div><!--/panel-->                               
+  </div><!--/panel-->  
+  <div class="hidden-xs" 
+      style="height:0px;position:relative;top:-488px;left:107%;width:0px;">
+      <img src="{{URL::to('asset')}}/images/blank.png" height="480px;"></div>                             
 </div><!--/col-->
 @stop
