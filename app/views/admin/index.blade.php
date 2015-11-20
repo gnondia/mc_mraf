@@ -12,10 +12,7 @@
 
 					<h2 class="col-md-offset-3">Add a product</h2>
 					<br />
-					{{Form::open(array('url'=>'admin/addproduct', 'class' => 'form-horizontal', 'files' => true, 'method' => 'post'))}}
-						<fieldset>
-
-						@if(Session::has('alertMessage'))
+					@if(Session::has('alertMessage'))
 			            <div class="alert alert-success alert-dismissible fade in" role="alert" style="width: 60%;">
 			              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			              <strong>{{Session::get('alertMessage')}}</strong>
@@ -28,6 +25,8 @@
 			              <strong>{{Session::get('alertError')}}</strong>
 			            </div>
 			            @endif 
+					{{Form::open(array('url'=>'admin/addproduct', 'class' => 'form-horizontal', 'files' => true, 'method' => 'post'))}}
+						<fieldset>
 
 		                <div class="form-group">
 		                  <div class="col-lg-10">
@@ -53,15 +52,6 @@
 		                    <input type="text" class="form-control" name="p_owner" value="{{ Input::old('p_owner') != NULL ? Input::old('p_owner') : '' }}" 
 		                    placeholder=" Product owner">
 		                    <span class="badge alert-danger">{{ ($errors->has('p_owner') ? $errors->first('p_owner') : '') }}</span>
-		                  </div>
-		                </div>
-
-		                <div class="form-group">
-		                  <div class="col-lg-8" style="width: 59%;">
-		                  	<label class="hidden-xs">Product picture</label>
-		                    <!-- <input type="file" class="form-control hidden-xs" name="prod_picture" placeholder=" Product picture"> -->
-		                    {{Form::file('prod_picture', array('class' => 'form-control hidden-xs'))}}
-		                    <span class="badge alert-danger">{{ ($errors->has('prod_picture') ? $errors->first('prod_picture') : '') }}</span>
 		                  </div>
 		                </div>
 
@@ -102,8 +92,8 @@
 		                </div>
 
 		                <div class="form-group">
-		                  <div style="padding-left:39%;">
-		                    <button type="submit" class="btn btn-success">Add product</button>
+		                  <div style="padding-left:49%;">
+		                    <button type="submit" class="btn btn-success">Next</button>
 		                  </div>
 		                </div>
 
@@ -112,7 +102,7 @@
 			</div>
 
 			<div class="hidden-xs" 
-			style="height:0px;position:relative;top:-810px;left:70%;width:0px;"><img src="{{URL::to('asset')}}/images/blank.png"></div>
+			style="height:0px;position:relative;top:-740px;left:70%;width:0px;"><img src="{{URL::to('asset')}}/images/blank.png"></div>
 
 		</div>
 @stop

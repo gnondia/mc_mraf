@@ -50,6 +50,8 @@
 			<!-- //slider-->
 			<!--content-->
 			<div class="content">
+			<div class = "panel panel-default" style="width:100%">
+				  <div class="panel-body">
 				<div class="container">
 				<div class="top-content">
 					<div class="content-top">
@@ -106,6 +108,8 @@
 						</div>
 						<div class="clearfix"> </div>
 					</div>
+				</div>
+				</div>
 				</div>
 				</div>
 				<!---->

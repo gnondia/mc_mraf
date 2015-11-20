@@ -17,12 +17,12 @@ class BlogController extends BaseController {
 			$blog->blog_owner = Input::get('name');
 			$blog->title = Input::get('title');
 			$blog->content = Input::get('content');
-			$blog->date = date('Y M D');
+			$blog->date = date('Y-M-D');
 			$blog->save();
 
-			return Redirect::to('/blogs')->with('alertMessage',"Blog posted successfully!!!");
+			return Redirect::to('/blogs')->with('alertMessage', "Blog posted successfully!!!");
 		}
-		if($registerValidator->fails())
+		if($blogValidator->fails())
 		{
 			return Redirect::back()->withInput()->withErrors($blogValidator);
 		}

@@ -14,6 +14,10 @@
 			<!--content-->
 			<div class="content">
 				<div class="container">
+				<div class = "panel panel-default">
+				   <div class = "panel-heading"><h2>Buy your products for an affordable price.</h2>
+				    </div>
+				  <div class="panel-body">
 				<div class="top-content">
 					<div class="content-top">
 						<div class="col-md-3 look">
@@ -69,6 +73,8 @@
 						</div>
 						<div class="clearfix"> </div>
 					</div>
+				</div>
+				</div>
 				</div>
 				</div>
 				<!---->

@@ -159,14 +159,11 @@ Route::post('/admin/addproduct', function(){
 			'phone' => 'required',
 			'measurement' => 'required',
 			'quantity' => 'required',
-			'prod_picture' => 'required',
 			);
 		$productValidator = Validator::make($productData,$productRules);
 		if( $productValidator->fails()) {
 			return Redirect::back()->withInput()->withErrors($productValidator);
 		}
-
-		//return var_dump(Input::file('prod_picture'));
 
 		$product = new Product();
 		$product->name = Input::get('pname');
@@ -176,22 +173,41 @@ Route::post('/admin/addproduct', function(){
 		$product->owner_tel = Input::get('phone');
 		$product->measurement = Input::get('measurement');
 		$product->quantity_in_stock = Input::get('quantity');
+		$product->save();
 
-		if(Input::hasFile('prod_picture')){
+		$data['max_id'] = DB::table('products')->max('id');
+
+		return View::make('admin/steptwo')->with($data)->with('alertMessage', 'We just need more information to add your product!!!!');
+});
+
+Route::post('/admin/addproduct2', function(){
+		$productData = Input::all();
+		$productRules = array(
+			'description' => 'required',
+			);
+		$productValidator = Validator::make($productData,$productRules);
+		if( $productValidator->fails()) {
+			return Redirect::back()->withInput()->withErrors($productValidator);
+		}
+
+		$product = Product::find(Input::get('id'));
+		$product->description = Input::get('description');
+
+		if((Input::hasFile('prod_picture'))){
 	        $rulesForFile = array(
 	            'prod_picture' => 'mimes:jpeg,jpg,png',
 	        );
 
 	        $validatorForFile = Validator::make(Input::all(), $rulesForFile);
-	        $fileName = $productData['prod_picture'];
+	        $fileName = $_FILES['prod_picture']['name'];
 	        try {
-	        	Input::file('prod_picture')->move('products/', $fileName);
-	        	$products->picture = $fileName;
+	        	Input::file('prod_picture')->move(base_path() . 'public/products/', $fileName);
+	        	$product->picture = $fileName;
 	        } catch (Exception $e) {
 	        	throw new Exception("Picture was not moved....", 1);
 	        }
 	    }
 		$product->save();
 
-		return Redirect::back()->with('alertMessage', 'Product added successfully');
+		return Redirect::to('/admin/addproduct')->with('alertMessage', 'Your product has been added successfully!!!!');
 });

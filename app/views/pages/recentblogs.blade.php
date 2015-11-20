@@ -1,18 +1,26 @@
 @extends('layouts.layout')
 
 @section('content')
-@if(Session::has('alertError'))
-  <div class="alert alert-danger alert-dismissible fade in" role="alert" style="width:98%; position:relative;left:10px;">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <strong>{{Session::get('alertError')}}</strong>
-  </div>
-@endif
+
 <div class="container">
-<div class = "panel panel-success">
-   <div class = "panel-heading"><h3>Latest Blogs on our Agricultural Products</h3></div>
+<div class = "panel panel-default">
+   <div class = "panel-heading"><h2>Latest Blogs on our Agricultural Products</h2>
+    <a href="{{URL::to('/postblog')}}"><button class="btn btn-success pull-right" style="position:relative;top:-43px;left:15px;">Post Blog</button></a>
+    </div>
   </div>
 <div class="row">
 <div class="col-md-8">
+  @if(Session::has('alertError'))
+  <div class="alert alert-danger alert-dismissible fade in" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <strong>{{Session::get('alertError')}}</strong>
+  </div>
+@elseif(Session::has('alertMessage'))
+  <div class="alert alert-success alert-dismissible fade in" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <strong>{{Session::get('alertMessage')}}</strong>
+  </div>
+@endif
   @foreach($blogs as $blog)
   <div class = "panel panel-success">
    <div class = "panel-heading"><strong>{{$blog->title}}</strong> posted by: 
